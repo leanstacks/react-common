@@ -1,6 +1,6 @@
 {
   "name": "@leanstacks/react-common",
-  "version": "0.1.0-rc6",
+  "version": "0.1.0",
   "description": "Leanstacks organization common React components.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -14,8 +14,7 @@
     "url": "https://github.com/leanstacks/react-common"
   },
   "keywords": [
-    "react",
-    "typescript"
+    "react"
   ],
   "author": "LeanStacks",
   "license": "MIT",
