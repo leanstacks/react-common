@@ -8,6 +8,7 @@
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
     "test": "jest",
+    "test:coverage": "jest --coverage --silent --verbose --color",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
