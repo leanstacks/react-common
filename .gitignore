@@ -8,3 +8,6 @@
 
 # builds
 /dist
+
+# storybook
+/storybook-static
