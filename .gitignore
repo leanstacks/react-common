@@ -9,5 +9,12 @@
 # builds
 /dist
 
+# testing
+/coverage
+
 # storybook
 /storybook-static
+
+# misc
+.DS_Store
+*.log*
