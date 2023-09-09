@@ -13,6 +13,7 @@ const meta = {
   argTypes: {
     children: { description: 'The text to display.' },
     className: { description: 'Additional CSS classes.' },
+    testId: { description: 'Unit test identifier.' },
     variant: {
       control: 'select',
       options: [
