@@ -3,7 +3,12 @@ import classNames from 'classnames';
 
 import { TextProps, TextVariant } from './Text.types';
 
-const Text: React.FC<TextProps> = ({ children, className, variant = TextVariant.BodyCopy }) => {
+const Text: React.FC<TextProps> = ({
+  children,
+  className,
+  testId = 'text',
+  variant = TextVariant.BodyCopy,
+}) => {
   const getVariantClasses = (variant: TextVariant): string => {
     switch (variant) {
       case TextVariant.Heading1:
@@ -18,7 +23,11 @@ const Text: React.FC<TextProps> = ({ children, className, variant = TextVariant.
     }
   };
 
-  return <div className={classNames(getVariantClasses(variant), className)}>{children}</div>;
+  return (
+    <div className={classNames(getVariantClasses(variant), className)} data-testid={testId}>
+      {children}
+    </div>
+  );
 };
 
 export default Text;
