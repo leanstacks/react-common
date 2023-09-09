@@ -3,6 +3,13 @@
 @layer base {
   html {
     -webkit-tap-highlight-color: transparent;
+    background-color: theme('colors.white');
+    color: theme('colors.slate.700');
+  }
+  html.dark,
+  html[data-mode='dark'] {
+    background-color: theme('colors.slate.900');
+    color: theme('colors.slate.300/70');
   }
   *::-webkit-scrollbar {
     width: theme('spacing[2.5]');
