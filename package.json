@@ -26,7 +26,8 @@
   },
   "homepage": "https://github.com/leanstacks/react-common#readme",
   "dependencies": {
-    "classnames": "^2.3.2"
+    "classnames": "^2.3.2",
+    "dayjs": "^1.11.9"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.15",
