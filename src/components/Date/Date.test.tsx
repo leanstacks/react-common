@@ -1,5 +1,5 @@
 import React from 'react';
-import { getAllByTestId, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import Date from './Date';
 import { DateFormat } from './Date.types';

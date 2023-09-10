@@ -11,7 +11,7 @@ const meta = {
   },
   tags: ['autodocs'],
   argTypes: {
-    date: { description: 'The text to display.' },
+    date: { description: 'The date as a ISO8601 string or the number of milliseconds.' },
     className: { description: 'Additional CSS classes.' },
     testId: { description: 'Unit test identifier.' },
     format: {
