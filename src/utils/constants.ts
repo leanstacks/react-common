@@ -1,5 +1,5 @@
 /**
- * Possible `unit` values to use with "unit" formatting style using Intl.NumberFormat.
+ * Possible `unit` values to use with "unit" formatting style using `Intl.NumberFormat`.
  * @see https://tc39.es/ecma402/#table-sanctioned-single-unit-identifiers
  */
 export enum Unit {

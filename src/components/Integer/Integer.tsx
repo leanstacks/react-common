@@ -6,8 +6,7 @@ import { formatNumber } from '../../utils/numbers';
 /**
  * Format and display an integer number.
  * @param {IntegerProps} props - Component properties.
- * @returns {JSXElement}
- * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options
+ * @returns {JSX.Element} JSX
  */
 const Integer: React.FC<IntegerProps> = ({
   className,
@@ -15,7 +14,7 @@ const Integer: React.FC<IntegerProps> = ({
   unitDisplay,
   value,
   testId = 'integer',
-}) => {
+}: IntegerProps): JSX.Element => {
   const val = useMemo(() => {
     // if formatting with units
     if (unit) {
