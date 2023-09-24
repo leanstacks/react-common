@@ -15,7 +15,7 @@ const Decimal: React.FC<DecimalProps> = ({
   unit,
   unitDisplay,
   value,
-  testId = 'integer',
+  testId = 'decimal',
 }: DecimalProps): JSX.Element => {
   const val = useMemo(() => {
     // if formatting with units
