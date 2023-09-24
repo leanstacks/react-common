@@ -1,4 +1,16 @@
 /**
+ * Possible `signDisplay` values to use with `Intl.NumberFormat`. By default,
+ * display sign for negative numbers only, including negative zero. Default: `auto`.
+ * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
+ */
+export enum SignDisplay {
+  Auto = 'auto',
+  Always = 'always',
+  ExceptZero = 'exceptZero',
+  Never = 'never',
+}
+
+/**
  * Possible `unit` values to use with "unit" formatting style using `Intl.NumberFormat`.
  * @see https://tc39.es/ecma402/#table-sanctioned-single-unit-identifiers
  */
@@ -17,7 +29,7 @@ export enum Unit {
 
 /**
  * Possible `unitDisplay` values to use with "unit" formatting style using
- * `Intl.NumberFormat`. Default: `short`.
+ * `Intl.NumberFormat`. Default: `short`, e.g. "10 cm".
  */
 export enum UnitDisplay {
   Long = 'long',

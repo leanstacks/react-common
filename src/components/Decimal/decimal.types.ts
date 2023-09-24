@@ -1,4 +1,4 @@
-import { Unit, UnitDisplay } from '../../utils/constants';
+import { SignDisplay, Unit, UnitDisplay } from '../../utils/constants';
 
 /**
  * Properties for the `Decimal` component.
@@ -8,6 +8,7 @@ export interface DecimalProps {
   className?: string;
   maximumFractionDigits?: number;
   minimumFractionDigits?: number;
+  signDisplay?: SignDisplay;
   unit?: Unit;
   unitDisplay?: UnitDisplay;
   value: number;

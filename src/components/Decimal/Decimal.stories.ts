@@ -15,6 +15,7 @@ const meta = {
     testId: { description: 'Unit test identifier.' },
     minimumFractionDigits: { description: 'Minimum number of places right of the decimal.' },
     maximumFractionDigits: { description: 'Maximum number of places right of the decimal.' },
+    signDisplay: { control: 'select', description: 'When to display the sign for the number.' },
     unit: {
       control: 'select',
       options: [
@@ -63,6 +64,12 @@ export const MinimumDigits: Story = {
     value: 3.14,
     maximumFractionDigits: 4,
     minimumFractionDigits: 4,
+  },
+};
+
+export const Sign: Story = {
+  args: {
+    value: -3.14159265359,
   },
 };
 

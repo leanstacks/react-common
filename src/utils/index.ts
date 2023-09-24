@@ -1,1 +1,1 @@
-export { Unit, UnitDisplay } from './constants';
+export { SignDisplay, Unit, UnitDisplay } from './constants';
