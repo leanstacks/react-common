@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import Decimal from './Decimal';
-import { Unit, UnitDisplay } from '../../utils';
+import { SignDisplay, Unit, UnitDisplay } from '../../utils';
 
 const meta = {
   title: 'Components/Decimal',
@@ -70,6 +70,7 @@ export const MinimumDigits: Story = {
 export const Sign: Story = {
   args: {
     value: -3.14159265359,
+    signDisplay: SignDisplay.Always,
   },
 };
 

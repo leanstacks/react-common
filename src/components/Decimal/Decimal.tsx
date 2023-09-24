@@ -2,7 +2,6 @@ import React, { useMemo } from 'react';
 
 import { DecimalProps } from './decimal.types';
 import { formatNumber } from '../../utils/numbers';
-import { SignDisplay } from '../../utils';
 
 /**
  * The `Decimal` React component formats and renders a decimal number.
