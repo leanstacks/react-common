@@ -19,7 +19,11 @@ const Decimal: React.FC<DecimalProps> = ({
   testId = 'decimal',
 }: DecimalProps): JSX.Element => {
   const val = useMemo(() => {
-    const formatOptions = { maximumFractionDigits, minimumFractionDigits, signDisplay };
+    const formatOptions: Intl.NumberFormatOptions = {
+      maximumFractionDigits,
+      minimumFractionDigits,
+      signDisplay,
+    };
     // if formatting with units
     if (unit) {
       return formatNumber(value, {
