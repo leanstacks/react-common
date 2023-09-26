@@ -1,4 +1,4 @@
-import { Unit, UnitDisplay } from '../../utils/constants';
+import { SignDisplay, Unit, UnitDisplay } from '../../utils/constants';
 
 /**
  * Properties for the `Integer` component.
@@ -6,6 +6,7 @@ import { Unit, UnitDisplay } from '../../utils/constants';
  */
 export interface IntegerProps {
   className?: string;
+  signDisplay?: SignDisplay;
   unit?: Unit;
   unitDisplay?: UnitDisplay;
   value: number;

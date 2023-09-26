@@ -10,24 +10,26 @@ import { formatNumber } from '../../utils/numbers';
  */
 const Integer: React.FC<IntegerProps> = ({
   className,
+  signDisplay,
   unit,
   unitDisplay,
   value,
   testId = 'integer',
 }: IntegerProps): JSX.Element => {
   const val = useMemo(() => {
+    const formatOptions: Intl.NumberFormatOptions = { maximumFractionDigits: 0, signDisplay };
     // if formatting with units
     if (unit) {
       return formatNumber(value, {
         style: 'unit',
         unit,
         unitDisplay,
-        maximumFractionDigits: 0,
+        ...formatOptions,
       });
     }
     // everything else
-    return formatNumber(value, { maximumFractionDigits: 0 });
-  }, [value, unit, unitDisplay]);
+    return formatNumber(value, formatOptions);
+  }, [value, signDisplay, unit, unitDisplay]);
 
   return (
     <span className={className} data-testid={testId}>
