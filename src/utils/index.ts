@@ -1,1 +1,8 @@
-export { SignDisplay, Unit, UnitDisplay } from './constants';
+export {
+  CurrencyCode,
+  CurrencyDisplay,
+  CurrencySign,
+  SignDisplay,
+  Unit,
+  UnitDisplay,
+} from './constants';
