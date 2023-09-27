@@ -1,4 +1,38 @@
 /**
+ * ISO 4217 Currency Codes
+ * @see https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes
+ */
+export enum CurrencyCode {
+  CAD = 'CAD', // Canadian Dollar
+  EUR = 'EUR', // Euro
+  GBP = 'GBP', // Pound sterling (Great Britian)
+  MXN = 'MXN', // Mexican Peso
+  USD = 'USD', // US Dollar
+}
+
+/**
+ * Possible `currencyDisplay` values to use with `Intl.NumberFormat`.
+ * Default: `symbol`.
+ * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
+ */
+export enum CurrencyDisplay {
+  Code = 'code',
+  Name = 'name',
+  NarrowSymbol = 'narrowSymbol',
+  Symbol = 'symbol',
+}
+
+/**
+ * Possible `currencySign` values to use with `Intl.NumberFormat`.
+ * Default: `standard`.
+ * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
+ */
+export enum CurrencySign {
+  Accounting = 'accounting',
+  Standard = 'standard',
+}
+
+/**
  * Possible `signDisplay` values to use with `Intl.NumberFormat`. By default,
  * display sign for negative numbers only, including negative zero. Default: `auto`.
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
