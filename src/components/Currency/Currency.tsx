@@ -4,6 +4,11 @@ import { CurrencyProps } from './Currency.types';
 import { CurrencyCode } from '../../utils/constants';
 import { formatNumber } from '../../utils/numbers';
 
+/**
+ * The `Currency` Reactcomponent formats and renders a currency value.
+ * @param {CurrencyProps} props - Component properties.
+ * @returns {JSX.Element} JSX
+ */
 const Currency: React.FC<CurrencyProps> = ({
   className,
   currency = CurrencyCode.USD,
@@ -11,7 +16,7 @@ const Currency: React.FC<CurrencyProps> = ({
   currencySign,
   value,
   testId = 'currency',
-}: CurrencyProps) => {
+}: CurrencyProps): JSX.Element => {
   const val = useMemo(() => {
     const formatOptions: Intl.NumberFormatOptions = {
       style: 'currency',
