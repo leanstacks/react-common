@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import Integer from './Integer';
-import { Unit, UnitDisplay } from '../../utils';
+import { SignDisplay, Unit, UnitDisplay } from '../../utils';
 
 const meta = {
   title: 'Components/Integer',
@@ -13,6 +13,7 @@ const meta = {
   argTypes: {
     className: { description: 'Additional CSS classes.' },
     testId: { description: 'Unit test identifier.' },
+    signDisplay: { control: 'select', description: 'When to display the sign for the number.' },
     unit: {
       control: 'select',
       options: [
@@ -42,9 +43,16 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Plain: Story = {
+export const Default: Story = {
   args: {
     value: 23000,
+  },
+};
+
+export const Sign: Story = {
+  args: {
+    value: 23000,
+    signDisplay: SignDisplay.Always,
   },
 };
 
