@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 
-import { DecimalProps } from './decimal.types';
+import { DecimalProps } from './Decimal.types';
 import { formatNumber } from '../../utils/numbers';
 
 /**
