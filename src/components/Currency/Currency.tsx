@@ -5,7 +5,7 @@ import { CurrencyCode } from '../../utils/constants';
 import { formatNumber } from '../../utils/numbers';
 
 /**
- * The `Currency` Reactcomponent formats and renders a currency value.
+ * The `Currency` React component formats and renders a currency value.
  * @param {CurrencyProps} props - Component properties.
  * @returns {JSX.Element} JSX
  */
