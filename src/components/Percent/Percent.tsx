@@ -10,13 +10,21 @@ import { formatNumber } from '../../utils/numbers';
  */
 const Percent: React.FC<PercentProps> = ({
   className,
+  maximumFractionDigits,
+  minimumFractionDigits,
+  signDisplay,
   value,
   testId = 'percent',
 }: PercentProps): JSX.Element => {
   const val = useMemo(() => {
-    const formatOptions: Intl.NumberFormatOptions = { style: 'percent' };
+    const formatOptions: Intl.NumberFormatOptions = {
+      style: 'percent',
+      maximumFractionDigits,
+      minimumFractionDigits,
+      signDisplay,
+    };
     return formatNumber(value, formatOptions);
-  }, [value]);
+  }, [value, maximumFractionDigits, minimumFractionDigits, signDisplay]);
 
   return (
     <span className={className} data-testid={testId}>
