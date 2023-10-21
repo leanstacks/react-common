@@ -1,3 +1,5 @@
+import { PropsWithClassName, PropsWithTestId } from "../../utils/types";
+
 export enum DateFormat {
   DATE = 'MM/DD/YYYY',
   DAY_OF_WEEK = 'dddd',
@@ -7,9 +9,7 @@ export enum DateFormat {
   TIMESTAMP = 'dddd MMMM D [at] h:mma',
 }
 
-export interface DateProps {
-  className?: string;
+export interface DateProps extends PropsWithClassName, PropsWithTestId {
   date: string | number;
   format?: DateFormat;
-  testId?: string;
 }
