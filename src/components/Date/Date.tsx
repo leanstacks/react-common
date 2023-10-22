@@ -8,7 +8,7 @@ const Date: React.FC<DateProps> = ({
   date,
   testId = 'date',
   format = DateFormat.DATE,
-}) => {
+}: DateProps): JSX.Element => {
   return (
     <span className={className} data-testid={testId}>
       {dayjs(date).format(format)}
