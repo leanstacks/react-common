@@ -8,7 +8,7 @@ const Text: React.FC<TextProps> = ({
   className,
   testId = 'text',
   variant = TextVariant.BodyCopy,
-}) => {
+}: TextProps): JSX.Element => {
   const getVariantClasses = (variant: TextVariant): string => {
     switch (variant) {
       case TextVariant.Heading1:

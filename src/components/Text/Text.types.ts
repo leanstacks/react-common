@@ -1,4 +1,5 @@
 import { PropsWithChildren } from 'react';
+import { PropsWithTestId } from '../../utils/types';
 
 export enum TextVariant {
   Heading1 = 'Heading1',
@@ -7,8 +8,7 @@ export enum TextVariant {
   BodyCopy = 'BodyCopy',
 }
 
-export interface TextProps extends PropsWithChildren {
+export interface TextProps extends PropsWithChildren, PropsWithTestId {
   className?: string;
-  testId?: string;
   variant?: TextVariant;
 }

@@ -1,4 +1,5 @@
 import { CurrencyCode, CurrencyDisplay, CurrencySign } from '../../utils/constants';
+import { PropsWithClassName, PropsWithTestId } from '../../utils/types';
 
 /**
  * Properties for the `Currency` component.
@@ -9,11 +10,9 @@ import { CurrencyCode, CurrencyDisplay, CurrencySign } from '../../utils/constan
  * @param {number} value - The amount.
  * @param {string} [testId] - Optional. A test library identifier. Default: `currency`.
  */
-export interface CurrencyProps {
-  className?: string;
+export interface CurrencyProps extends PropsWithClassName, PropsWithTestId {
   currency?: CurrencyCode;
   currencyDisplay?: CurrencyDisplay;
   currencySign?: CurrencySign;
   value: number;
-  testId?: string;
 }

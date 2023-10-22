@@ -11,7 +11,7 @@ const Button: React.FC<ButtonProps> = ({
   testId = 'button',
   type = 'button',
   ...props
-}) => {
+}: ButtonProps): JSX.Element => { 
   const getVariantClasses = (variant: ButtonVariant): string => {
     switch (variant) {
       case ButtonVariant.Secondary:

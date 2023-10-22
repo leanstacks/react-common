@@ -21,7 +21,7 @@ const DayOfTheWeek: React.FC<DayOfTheWeekProps> = ({
   date,
   relative = false,
   testId = 'day-of-the-week',
-}) => {
+}: DayOfTheWeekProps): JSX.Element => {
   if (relative) {
     let relativeDayOfTheWeek: string | null = null;
     const theDate = dayjs(date);
