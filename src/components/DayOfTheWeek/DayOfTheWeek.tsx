@@ -16,6 +16,12 @@ const TODAY = 'Today';
 const TOMORROW = 'Tomorrow';
 const YESTERDAY = 'Yesterday';
 
+/**
+ * The `DayOfTheWeek` React component renders the day of the week,
+ * e.g. `Monday`, for the supplied date value.
+ * @param {DayOfTheWeekProps} props - Component properties, `DayOfTheWeekProps`.
+ * @returns {JSX.Element} JSX
+ */
 const DayOfTheWeek: React.FC<DayOfTheWeekProps> = ({
   className,
   date,
