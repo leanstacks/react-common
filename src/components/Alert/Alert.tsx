@@ -12,9 +12,13 @@ const Alert: React.FC<AlertProps> = ({
     switch (variant) {
       case AlertVariant.Error:
         return 'bg-red-800/90 text-white/80';
+      case AlertVariant.Warning:
+        return 'bg-amber-400/90 text-slate-900';
+      case AlertVariant.Success:
+        return 'bg-green-800/90 text-white/80';
       case AlertVariant.Info:
       default:
-        return 'bg-slate-300/70';
+        return 'bg-blue-800/90 text-white/80';
     }
   };
 

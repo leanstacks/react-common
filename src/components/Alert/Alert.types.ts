@@ -1,5 +1,5 @@
-import { PropsWithChildren } from "react";
-import { PropsWithClassName, PropsWithTestId } from "../../utils/types";
+import { PropsWithChildren } from 'react';
+import { PropsWithClassName, PropsWithTestId } from '../../utils/types';
 
 export enum AlertVariant {
   Error = 'Error',
@@ -9,5 +9,5 @@ export enum AlertVariant {
 }
 
 export interface AlertProps extends PropsWithChildren, PropsWithClassName, PropsWithTestId {
-  variant?: AlertVariant
+  variant?: AlertVariant;
 }
