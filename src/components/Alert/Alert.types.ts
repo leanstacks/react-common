@@ -14,6 +14,9 @@ export enum AlertVariant {
 /**
  * Properties for the `Alert` component.
  * @param {AlertVariant} [variant] - Optional. The type of Alert. Default: `Info`
+ * @see {@link PropsWithChildren}
+ * @see {@link PropsWithClassName}
+ * @see {@link PropsWithTestId}
  */
 export interface AlertProps extends PropsWithChildren, PropsWithClassName, PropsWithTestId {
   variant?: AlertVariant;

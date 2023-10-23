@@ -3,6 +3,11 @@ import classNames from 'classnames';
 
 import { ButtonProps, ButtonVariant } from './Button.types';
 
+/**
+ * The `Button` React componentformats and renders a styled button.
+ * @param {ButtonProps} props - Component properties, `ButtonProps`.
+ * @returns {JSX.Element} JSX
+ */
 const Button: React.FC<ButtonProps> = ({
   children,
   className,
@@ -11,7 +16,7 @@ const Button: React.FC<ButtonProps> = ({
   testId = 'button',
   type = 'button',
   ...props
-}: ButtonProps): JSX.Element => { 
+}: ButtonProps): JSX.Element => {
   const getVariantClasses = (variant: ButtonVariant): string => {
     switch (variant) {
       case ButtonVariant.Secondary:

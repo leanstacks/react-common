@@ -3,6 +3,12 @@ import classNames from 'classnames';
 
 import { TextProps, TextVariant } from './Text.types';
 
+/**
+ * The `Text` React component formats and renders a text value. Use the
+ * `variant` property to apply predefined styles.
+ * @param {TextProps} props - Component properties.
+ * @returns {JSX.Element} JSX
+ */
 const Text: React.FC<TextProps> = ({
   children,
   className,

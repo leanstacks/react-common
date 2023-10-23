@@ -4,7 +4,7 @@ import { IntegerProps } from './Integer.types';
 import { formatNumber } from '../../utils/numbers';
 
 /**
- * Format and display an integer number.
+ * The `Integer` React component formats and renders an integer number.
  * @param {IntegerProps} props - Component properties.
  * @returns {JSX.Element} JSX
  */

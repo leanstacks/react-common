@@ -1,6 +1,6 @@
 /**
  * ISO 4217 Currency Codes
- * @see https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes
+ * @see {@link https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes | ISO 4217 Currency Codes}
  */
 export enum CurrencyCode {
   CAD = 'CAD', // Canadian Dollar
@@ -13,7 +13,7 @@ export enum CurrencyCode {
 /**
  * Possible `currencyDisplay` values to use with `Intl.NumberFormat`.
  * Default: `symbol`.
- * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options | NumberFormatOptions}
  */
 export enum CurrencyDisplay {
   Code = 'code',
@@ -25,7 +25,7 @@ export enum CurrencyDisplay {
 /**
  * Possible `currencySign` values to use with `Intl.NumberFormat`.
  * Default: `standard`.
- * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options | NumberFormatOptions}
  */
 export enum CurrencySign {
   Accounting = 'accounting',
@@ -35,7 +35,7 @@ export enum CurrencySign {
 /**
  * Possible `signDisplay` values to use with `Intl.NumberFormat`. By default,
  * display sign for negative numbers only, including negative zero. Default: `auto`.
- * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options | NumberFormatOptions}
  */
 export enum SignDisplay {
   Auto = 'auto',
@@ -46,7 +46,7 @@ export enum SignDisplay {
 
 /**
  * Possible `unit` values to use with "unit" formatting style using `Intl.NumberFormat`.
- * @see https://tc39.es/ecma402/#table-sanctioned-single-unit-identifiers
+ * @see {@link https://tc39.es/ecma402/#table-sanctioned-single-unit-identifiers | ECMA Units of Measurement }
  */
 export enum Unit {
   Celsius = 'celsius',
@@ -64,6 +64,7 @@ export enum Unit {
 /**
  * Possible `unitDisplay` values to use with "unit" formatting style using
  * `Intl.NumberFormat`. Default: `short`, e.g. "10 cm".
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options | NumberFormatOptions}
  */
 export enum UnitDisplay {
   Long = 'long',
