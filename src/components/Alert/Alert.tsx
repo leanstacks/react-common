@@ -2,6 +2,12 @@ import React from 'react';
 import classNames from 'classnames';
 import { AlertProps, AlertVariant } from './Alert.types';
 
+/**
+ * The `Alert` React component formats and renders a styled message. Use the
+ * `variant` property to apply predefined styles.
+ * @param {AlertProps} props - Component properties, `AlertProps`.
+ * @returns {JSX.Element} JSX
+ */
 const Alert: React.FC<AlertProps> = ({
   children,
   className,

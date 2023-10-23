@@ -5,7 +5,7 @@ import { formatNumber } from '../../utils/numbers';
 
 /**
  * The `Percent` React component formats and renders a percent value.
- * @param {PercentProps} props = Component properties.
+ * @param {PercentProps} props - Component properties.
  * @returns {JSX.Element} JSX
  */
 const Percent: React.FC<PercentProps> = ({
