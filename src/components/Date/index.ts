@@ -1,3 +1,3 @@
 export { default as Date } from './Date';
 
-export { DateFormat } from './Date.types';
+export { DateFormat, DateProps } from './Date.types';

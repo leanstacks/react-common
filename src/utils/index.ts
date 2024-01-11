@@ -6,3 +6,5 @@ export {
   Unit,
   UnitDisplay,
 } from './constants';
+
+export { PropsWithClassName, PropsWithTestId } from './types';

@@ -1,3 +1,3 @@
 export { default as Alert } from './Alert';
 
-export { AlertVariant } from './Alert.types';
+export { AlertProps, AlertVariant } from './Alert.types';
