@@ -6,88 +6,88 @@ import { ButtonVariant } from './Button.types';
 
 describe('Button', () => {
   it('should render successfully', () => {
-    const { getByTestId } = render(<Button />);
+    render(<Button />);
 
-    expect(getByTestId('button')).toBeDefined();
+    expect(screen.getByTestId('button')).toBeDefined();
   });
 
   it('should use custom test ID', () => {
-    const { getByTestId, queryByTestId } = render(<Button testId="custom-testid" />);
+    render(<Button testId="custom-testid" />);
 
-    expect(queryByTestId('button')).toBeNull();
-    expect(getByTestId('custom-testid')).toBeDefined();
+    expect(screen.queryByTestId('button')).toBeNull();
+    expect(screen.getByTestId('custom-testid')).toBeDefined();
   });
 
   it('should use classes from className property', () => {
-    const { getByTestId } = render(<Button className="custom-class" />);
+    render(<Button className="custom-class" />);
 
-    expect(getByTestId('button').classList).toContain('custom-class');
+    expect(screen.getByTestId('button').classList).toContain('custom-class');
   });
 
   it('should render Solid variant', () => {
-    const { getByTestId } = render(<Button variant={ButtonVariant.Solid} />);
+    render(<Button variant={ButtonVariant.Solid} />);
 
-    expect(getByTestId('button').classList).toContain('bg-neutral-700');
+    expect(screen.getByTestId('button').classList).toContain('bg-neutral-700');
   });
 
   it('should render Outline variant', () => {
-    const { getByTestId } = render(<Button variant={ButtonVariant.Outline} />);
+    render(<Button variant={ButtonVariant.Outline} />);
 
-    expect(getByTestId('button').classList).toContain('border-neutral-700');
+    expect(screen.getByTestId('button').classList).toContain('border-neutral-700');
   });
 
   it('should render Text variant', () => {
-    const { getByTestId } = render(<Button variant={ButtonVariant.Text} />);
+    render(<Button variant={ButtonVariant.Text} />);
 
-    expect(getByTestId('button').classList).toContain('border-transparent');
+    expect(screen.getByTestId('button').classList).toContain('border-transparent');
   });
 
   it('should render Solid variant when variant not specified', () => {
-    const { getByTestId } = render(<Button />);
+    render(<Button />);
 
-    expect(getByTestId('button').classList).toContain('bg-neutral-700');
+    expect(screen.getByTestId('button').classList).toContain('bg-neutral-700');
   });
 
   it('should have default type', () => {
-    const { getByTestId } = render(<Button />);
+    render(<Button />);
 
-    expect(getByTestId('button').getAttribute('type')).toBe('button');
+    expect(screen.getByTestId('button').getAttribute('type')).toBe('button');
   });
 
   it('should have submit type', () => {
-    const { getByTestId } = render(<Button type="submit" />);
+    render(<Button type="submit" />);
 
-    expect(getByTestId('button').getAttribute('type')).toBe('submit');
+    expect(screen.getByTestId('button').getAttribute('type')).toBe('submit');
   });
 
   it('should have reset type', () => {
-    const { getByTestId } = render(<Button type="reset" />);
+    render(<Button type="reset" />);
 
-    expect(getByTestId('button').getAttribute('type')).toBe('reset');
+    expect(screen.getByTestId('button').getAttribute('type')).toBe('reset');
   });
 
   it('should have default role', () => {
-    const { getByTestId } = render(<Button />);
+    render(<Button />);
 
-    expect(getByTestId('button').getAttribute('role')).toBe('button');
+    expect(screen.getByTestId('button').getAttribute('role')).toBe('button');
   });
 
   it('should have custom role', () => {
-    const { getByTestId } = render(<Button role="search" />);
+    render(<Button role="search" />);
 
-    expect(getByTestId('button').getAttribute('role')).toBe('search');
+    expect(screen.getByTestId('button').getAttribute('role')).toBe('search');
   });
 
   it('should have title', () => {
-    const { getByTestId } = render(<Button title="custom-title" />);
+    render(<Button title="custom-title" />);
 
-    expect(getByTestId('button').getAttribute('title')).toBe('custom-title');
+    expect(screen.getByTestId('button').getAttribute('title')).toBe('custom-title');
   });
 
   it('should be disabled', () => {
-    const { getByTestId } = render(<Button disabled />);
+    render(<Button disabled />);
 
-    expect(getByTestId('button').getAttribute('disabled')).not.toBeNull();
+    expect(screen.getByTestId('button').getAttribute('disabled')).not.toBeNull();
   });
 
   it('should call click handler function', () => {
