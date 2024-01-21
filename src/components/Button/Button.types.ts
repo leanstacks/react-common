@@ -5,8 +5,8 @@ import { PropsWithTestId } from '../../utils/types';
  * The `ButtonVariant` enumerates types of Buttons.
  */
 export enum ButtonVariant {
-  Primary = 'Primary',
-  Secondary = 'Secondary',
+  Solid = 'Solid',
+  Outline = 'Outline',
   Text = 'Text',
 }
 

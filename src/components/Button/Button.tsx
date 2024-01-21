@@ -12,33 +12,33 @@ const Button: React.FC<ButtonProps> = ({
   children,
   className,
   role = 'button',
-  variant = ButtonVariant.Primary,
-  testId = 'button',
   type = 'button',
+  variant = ButtonVariant.Solid,
+  testId = 'button',
   ...props
 }: ButtonProps): JSX.Element => {
   const getVariantClasses = (variant: ButtonVariant): string => {
     switch (variant) {
-      case ButtonVariant.Secondary:
-        return 'bg-slate-500 text-white';
+      case ButtonVariant.Outline:
+        return 'border-neutral-700 dark:border-neutral-300';
       case ButtonVariant.Text:
-        return 'text-blue-500';
-      case ButtonVariant.Primary:
+        return 'border-transparent';
+      case ButtonVariant.Solid:
       default:
-        return 'bg-blue-500 text-white';
+        return 'border-neutral-700 bg-neutral-700 text-white dark:border-neutral-300 dark:bg-neutral-300 dark:text-neutral-900';
     }
   };
 
   return (
     <button
-      type={type}
       className={classNames(
-        'rounded-full p-2 enabled:hover:opacity-80 disabled:opacity-50',
+        'rounded-md border px-2 py-1 enabled:hover:opacity-80 disabled:opacity-50',
         getVariantClasses(variant),
         className,
       )}
-      role={role}
       data-testid={testId}
+      role={role}
+      type={type}
       {...props}
     >
       {children}

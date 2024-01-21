@@ -24,28 +24,28 @@ describe('Button', () => {
     expect(getByTestId('button').classList).toContain('custom-class');
   });
 
-  it('should render Primary variant', () => {
-    const { getByTestId } = render(<Button variant={ButtonVariant.Primary} />);
+  it('should render Solid variant', () => {
+    const { getByTestId } = render(<Button variant={ButtonVariant.Solid} />);
 
-    expect(getByTestId('button').classList).toContain('bg-blue-500');
+    expect(getByTestId('button').classList).toContain('bg-neutral-700');
   });
 
-  it('should render Secondary variant', () => {
-    const { getByTestId } = render(<Button variant={ButtonVariant.Secondary} />);
+  it('should render Outline variant', () => {
+    const { getByTestId } = render(<Button variant={ButtonVariant.Outline} />);
 
-    expect(getByTestId('button').classList).toContain('bg-slate-500');
+    expect(getByTestId('button').classList).toContain('border-neutral-700');
   });
 
   it('should render Text variant', () => {
     const { getByTestId } = render(<Button variant={ButtonVariant.Text} />);
 
-    expect(getByTestId('button').classList).toContain('text-blue-500');
+    expect(getByTestId('button').classList).toContain('border-transparent');
   });
 
-  it('should render Primary variant when variant not specified', () => {
+  it('should render Solid variant when variant not specified', () => {
     const { getByTestId } = render(<Button />);
 
-    expect(getByTestId('button').classList).toContain('bg-blue-500');
+    expect(getByTestId('button').classList).toContain('bg-neutral-700');
   });
 
   it('should have default type', () => {
@@ -73,9 +73,9 @@ describe('Button', () => {
   });
 
   it('should have custom role', () => {
-    const { getByTestId } = render(<Button role="custom-role" />);
+    const { getByTestId } = render(<Button role="search" />);
 
-    expect(getByTestId('button').getAttribute('role')).toBe('custom-role');
+    expect(getByTestId('button').getAttribute('role')).toBe('search');
   });
 
   it('should have title', () => {
