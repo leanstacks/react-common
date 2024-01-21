@@ -14,10 +14,7 @@ const meta = {
     children: { description: 'The content within the button.' },
     className: { description: 'Additional CSS classes.' },
     disabled: { description: 'Disabled state.' },
-    role: { description: 'The ARIA role.' },
     testId: { description: 'Unit test identifier.' },
-    title: { description: 'HTML Element title.' },
-    type: { description: 'The type of button.' },
     variant: {
       control: 'select',
       options: [ButtonVariant.Primary, ButtonVariant.Secondary, ButtonVariant.Text],
