@@ -12,12 +12,12 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     children: { description: 'The content within the button.' },
-    className: { description: 'Additional CSS classes.' },
-    disabled: { description: 'Disabled state.' },
+    className: { description: 'Additional CSS classes.', type: 'string' },
+    disabled: { description: 'Disabled state.', type: 'boolean' },
     testId: { description: 'Unit test identifier.' },
     variant: {
       control: 'select',
-      options: [ButtonVariant.Primary, ButtonVariant.Secondary, ButtonVariant.Text],
+      options: [ButtonVariant.Solid, ButtonVariant.Outline, ButtonVariant.Text],
       description: 'The variant style.',
     },
   },
@@ -27,17 +27,17 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const Solid: Story = {
   args: {
-    children: 'Primary button',
-    variant: ButtonVariant.Primary,
+    children: 'Solid button',
+    variant: ButtonVariant.Solid,
   },
 };
 
-export const Secondary: Story = {
+export const Outline: Story = {
   args: {
-    children: 'Secondary button',
-    variant: ButtonVariant.Secondary,
+    children: 'Outline button',
+    variant: ButtonVariant.Outline,
   },
 };
 
