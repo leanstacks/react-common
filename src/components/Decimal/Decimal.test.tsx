@@ -1,71 +1,61 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 import Decimal from './Decimal';
 import { SignDisplay, Unit, UnitDisplay } from '../../utils/constants';
 
 describe('Decimal', () => {
   it('should render successfully', () => {
-    const { getByTestId } = render(<Decimal value={3.1415} />);
+    render(<Decimal value={3.1415} />);
 
-    expect(getByTestId('decimal')).toBeDefined();
+    expect(screen.getByTestId('decimal')).toBeDefined();
   });
 
   it('should use custom test ID', () => {
-    const { getByTestId, queryByTestId } = render(
-      <Decimal value={3.1415} testId="custom-testid" />,
-    );
+    render(<Decimal value={3.1415} testId="custom-testid" />);
 
-    expect(queryByTestId('decimal')).toBeNull();
-    expect(getByTestId('custom-testid')).toBeDefined();
+    expect(screen.queryByTestId('decimal')).toBeNull();
+    expect(screen.getByTestId('custom-testid')).toBeDefined();
   });
 
   it('should use classes from className property', () => {
-    const { getByTestId } = render(<Decimal value={3.1415} className="custom-class" />);
+    render(<Decimal value={3.1415} className="custom-class" />);
 
-    expect(getByTestId('decimal').classList).toContain('custom-class');
+    expect(screen.getByTestId('decimal').classList).toContain('custom-class');
   });
 
   it('should render integer value as decimal', () => {
-    const { getByTestId } = render(<Decimal value={3} minimumFractionDigits={1} />);
+    render(<Decimal value={3} minimumFractionDigits={1} />);
 
-    expect(getByTestId('decimal').textContent).toBe('3.0');
+    expect(screen.getByTestId('decimal').textContent).toBe('3.0');
   });
 
   it('should render decimal with units', () => {
-    const { getByTestId } = render(<Decimal value={3.1415} unit={Unit.Centimeter} />);
+    render(<Decimal value={3.1415} unit={Unit.Centimeter} />);
 
-    expect(getByTestId('decimal').textContent).toBe('3.142 cm');
+    expect(screen.getByTestId('decimal').textContent).toBe('3.142 cm');
   });
 
   it('should render decimal with units and unit display', () => {
-    const { getByTestId } = render(
-      <Decimal value={3.1415} unit={Unit.Centimeter} unitDisplay={UnitDisplay.Narrow} />,
-    );
+    render(<Decimal value={3.1415} unit={Unit.Centimeter} unitDisplay={UnitDisplay.Narrow} />);
 
-    expect(getByTestId('decimal').textContent).toBe('3.142cm');
-  });
-
-  it('should render integer value as decimal', () => {
-    const { getByTestId } = render(<Decimal value={3} minimumFractionDigits={1} />);
-
-    expect(getByTestId('decimal').textContent).toBe('3.0');
+    expect(screen.getByTestId('decimal').textContent).toBe('3.142cm');
   });
 
   it('should render with minimum fraction digits', () => {
-    const { getByTestId } = render(<Decimal value={3.1415} minimumFractionDigits={6} />);
+    render(<Decimal value={3.1415} minimumFractionDigits={6} />);
 
-    expect(getByTestId('decimal').textContent).toBe('3.141500');
+    expect(screen.getByTestId('decimal').textContent).toBe('3.141500');
   });
 
   it('should render with maximum fraction digits', () => {
-    const { getByTestId } = render(<Decimal value={3.1415} maximumFractionDigits={1} />);
+    render(<Decimal value={3.1415} maximumFractionDigits={1} />);
 
-    expect(getByTestId('decimal').textContent).toBe('3.1');
+    expect(screen.getByTestId('decimal').textContent).toBe('3.1');
   });
 
   it('should render with sign displayed always', () => {
-    const { getByTestId } = render(
+    render(
       <div>
         <Decimal testId="positive" value={3.1415} signDisplay={SignDisplay.Always} />
         <Decimal testId="negative" value={-3.1415} signDisplay={SignDisplay.Always} />
@@ -73,13 +63,13 @@ describe('Decimal', () => {
       </div>,
     );
 
-    expect(getByTestId('positive').textContent).toBe('+3.142');
-    expect(getByTestId('negative').textContent).toBe('-3.142');
-    expect(getByTestId('zero').textContent).toBe('+0');
+    expect(screen.getByTestId('positive').textContent).toBe('+3.142');
+    expect(screen.getByTestId('negative').textContent).toBe('-3.142');
+    expect(screen.getByTestId('zero').textContent).toBe('+0');
   });
 
   it('should render with a sign only on negative values', () => {
-    const { getByTestId } = render(
+    render(
       <div>
         <Decimal testId="positive" value={3.1415} signDisplay={SignDisplay.Auto} />
         <Decimal testId="negative" value={-3.1415} signDisplay={SignDisplay.Auto} />
@@ -87,13 +77,13 @@ describe('Decimal', () => {
       </div>,
     );
 
-    expect(getByTestId('positive').textContent).toBe('3.142');
-    expect(getByTestId('negative').textContent).toBe('-3.142');
-    expect(getByTestId('zero').textContent).toBe('0');
+    expect(screen.getByTestId('positive').textContent).toBe('3.142');
+    expect(screen.getByTestId('negative').textContent).toBe('-3.142');
+    expect(screen.getByTestId('zero').textContent).toBe('0');
   });
 
   it('should render with no sign', () => {
-    const { getByTestId } = render(
+    render(
       <div>
         <Decimal testId="positive" value={3.1415} signDisplay={SignDisplay.Never} />
         <Decimal testId="negative" value={-3.1415} signDisplay={SignDisplay.Never} />
@@ -101,13 +91,13 @@ describe('Decimal', () => {
       </div>,
     );
 
-    expect(getByTestId('positive').textContent).toBe('3.142');
-    expect(getByTestId('negative').textContent).toBe('3.142');
-    expect(getByTestId('zero').textContent).toBe('0');
+    expect(screen.getByTestId('positive').textContent).toBe('3.142');
+    expect(screen.getByTestId('negative').textContent).toBe('3.142');
+    expect(screen.getByTestId('zero').textContent).toBe('0');
   });
 
   it('should render with sign displayed except for zero', () => {
-    const { getByTestId } = render(
+    render(
       <div>
         <Decimal testId="positive" value={3.1415} signDisplay={SignDisplay.ExceptZero} />
         <Decimal testId="negative" value={-3.1415} signDisplay={SignDisplay.ExceptZero} />
@@ -115,8 +105,8 @@ describe('Decimal', () => {
       </div>,
     );
 
-    expect(getByTestId('positive').textContent).toBe('+3.142');
-    expect(getByTestId('negative').textContent).toBe('-3.142');
-    expect(getByTestId('zero').textContent).toBe('0');
+    expect(screen.getByTestId('positive').textContent).toBe('+3.142');
+    expect(screen.getByTestId('negative').textContent).toBe('-3.142');
+    expect(screen.getByTestId('zero').textContent).toBe('0');
   });
 });
