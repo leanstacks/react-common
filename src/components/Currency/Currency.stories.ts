@@ -1,14 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import Currency from './Currency';
-import {
-  CurrencyCode,
-  CurrencyDisplay,
-  CurrencySign,
-  SignDisplay,
-  Unit,
-  UnitDisplay,
-} from '../../utils';
+import { CurrencyCode, CurrencyDisplay, CurrencySign } from '../../utils';
 
 const meta = {
   title: 'Components/Currency',
