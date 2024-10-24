@@ -13,3 +13,11 @@ export interface PropsWithTestId {
 export interface PropsWithClassName {
   className?: string;
 }
+
+/**
+ * Utility interface combining the most commonly used React component
+ * properties interfaces.
+ * @see {@link PropsWithClassName}
+ * @see {@link PropsWithTestId}
+ */
+export interface BaseComponentProps extends PropsWithClassName, PropsWithTestId {}
