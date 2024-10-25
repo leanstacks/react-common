@@ -7,4 +7,4 @@ export {
   UnitDisplay,
 } from './constants';
 
-export { PropsWithClassName, PropsWithTestId } from './types';
+export { BaseComponentProps, PropsWithClassName, PropsWithTestId } from './types';

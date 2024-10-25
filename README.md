@@ -6,9 +6,9 @@ A suite of common React components used to compose React applications for the Le
 
 This library requires the following
 
-- Node [LTS](https://github.com/nodejs/Release) 16.x or 18.x (preferable)
-- React ^18.2.0
-- TailwindCSS ^3.3.0
+- Node [LTS](https://github.com/nodejs/Release) 18 or higher
+- React 18.x
+- TailwindCSS 3.x
 
 ## Install
 
